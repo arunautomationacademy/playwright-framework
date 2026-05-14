@@ -1,38 +1,46 @@
 pipeline {
-  agent any
+    agent any
 
-  stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
+    tools {
+        nodejs 'Node 20'
     }
-    stage('Install dependencies') {
-      steps {
-        sh 'npm ci'
-      }
-    }
-    stage('Install Playwright browsers') {
-      steps {
-        sh 'npx playwright install --with-deps'
-      }
-    }
-    stage('Run tests') {
-      steps {
-        sh 'npx playwright test'
-      }
-    }
-    stage('Generate Allure report') {
-      steps {
-        sh 'allure generate allure-results --clean -o allure-report || true'
-      }
-    }
-  }
 
-  post {
-    always {
-      archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
-      archiveArtifacts artifacts: 'allure-report/**', fingerprint: true
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/arunautomationacademy/playwright-framework.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm ci'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat 'npx playwright test'
+            }
+        }
     }
-  }
+
+    post {
+        always {
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report'
+            ])
+        }
+    }
 }

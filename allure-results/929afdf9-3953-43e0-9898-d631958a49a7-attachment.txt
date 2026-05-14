@@ -1,0 +1,5 @@
+2026-05-12 21:08:12 [INFO]: Starting login flow
+2026-05-12 21:08:12 [INFO]: Filling element with value: Arun Kumar D
+2026-05-12 21:08:12 [INFO]: Filling element with value: secret_sauce
+2026-05-12 21:08:12 [INFO]: Clicking element
+2026-05-12 21:08:12 [INFO]: Expecting URL to contain: inventory

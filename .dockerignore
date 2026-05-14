@@ -1,0 +1,9 @@
+node_modules
+logs
+allure-report
+allure-results
+playwright-report
+test-results
+.git
+.DS_Store
+npm-debug.log

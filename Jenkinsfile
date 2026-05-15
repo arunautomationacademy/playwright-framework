@@ -19,8 +19,7 @@ pipeline {
 
         stage('Run Smoke Tests') {
             steps {
-                bat 'npx playwright test src/tests/smoke'
-            }
+                bat 'npx playwright test src/tests/smoke --workers=1'            }
         }
     }
 

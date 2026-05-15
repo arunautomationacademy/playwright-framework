@@ -6,15 +6,22 @@ pipeline {
     }
 
     stages {
+
         stage('Install Dependencies') {
             steps {
                 bat 'npm ci'
             }
         }
 
-        stage('Run Tests') {
+        stage('Install Playwright Browsers') {
             steps {
-                bat 'npx playwright test'
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run Smoke Tests') {
+            steps {
+                bat 'npx playwright test src/tests/smoke'
             }
         }
     }

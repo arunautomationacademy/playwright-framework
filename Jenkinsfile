@@ -5,17 +5,15 @@ pipeline {
         nodejs 'Node 20'
     }
 
+    environment {
+        PLAYWRIGHT_BROWSERS_PATH = 'C:\\playwright-browsers'
+    }
+
     stages {
 
         stage('Install Dependencies') {
             steps {
                 bat 'npm ci'
-            }
-        }
-
-        stage('Install Playwright Browsers') {
-            steps {
-                bat 'npx playwright install'
             }
         }
 

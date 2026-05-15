@@ -11,22 +11,31 @@ export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.username = page.getByLabel('Username');
-    this.password = page.getByLabel('Password');
-    this.loginButton = page.getByRole('button', { name: 'Login' });
-    this.loginError = page.getByRole('heading', { name: /Epic sadface:/i });
+    this.username = page.locator('#user-name');
+    this.password = page.locator('#password');
+    this.loginButton = page.locator('#login-button');
+    this.loginError = page.locator('[data-test="error"]');
   }
 
   async login(user: string, pass: string) {
     logger.info('Starting login flow');
-    await this.waitForVisible(this.username);
-    await this.fill(this.username, user);
-    await this.fill(this.password, pass);
-    await this.click(this.loginButton);
+
+    await this.username.waitFor({
+      state: 'visible',
+      timeout: 10000
+    });
+
+    await this.username.fill(user);
+    await this.password.fill(pass);
+    await this.loginButton.click();
   }
 
   async expectLoginError(message: RegExp | string) {
-    await this.waitForVisible(this.loginError);
+    await this.loginError.waitFor({
+      state: 'visible',
+      timeout: 10000
+    });
+
     await expect(this.loginError).toHaveText(message);
   }
 }

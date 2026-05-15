@@ -37,3 +37,38 @@
 2026-05-12 21:39:56 [INFO]: Waiting for element to be visible
 2026-05-12 21:39:56 [INFO]: Starting login flow
 2026-05-12 21:39:56 [INFO]: Waiting for element to be visible
+2026-05-15 11:33:49 [INFO]: API request: POST https://reqres.in/api/login
+2026-05-15 11:33:49 [ERROR]: API error: 401 /api/login - Request failed with status code 401
+2026-05-15 11:33:50 [INFO]: Starting login flow
+2026-05-15 11:33:50 [INFO]: Waiting for element to be visible
+2026-05-15 11:33:51 [INFO]: API request: POST https://reqres.in/api/login
+2026-05-15 11:33:52 [ERROR]: API error: 401 /api/login - Request failed with status code 401
+2026-05-15 11:33:53 [INFO]: API request: POST https://reqres.in/api/login
+2026-05-15 11:33:54 [ERROR]: API error: 401 /api/login - Request failed with status code 401
+2026-05-15 11:33:56 [INFO]: API request: GET https://reqres.in/api/users?page=2
+2026-05-15 11:33:56 [ERROR]: API error: 401 /api/users?page=2 - Request failed with status code 401
+2026-05-15 11:33:58 [INFO]: API request: GET https://reqres.in/api/users?page=2
+2026-05-15 11:33:58 [ERROR]: API error: 401 /api/users?page=2 - Request failed with status code 401
+2026-05-15 11:34:00 [INFO]: API request: GET https://reqres.in/api/users?page=2
+2026-05-15 11:34:00 [ERROR]: API error: 401 /api/users?page=2 - Request failed with status code 401
+2026-05-15 11:34:23 [INFO]: Starting login flow
+2026-05-15 11:34:23 [INFO]: Waiting for element to be visible
+2026-05-15 11:34:57 [INFO]: Starting login flow
+2026-05-15 11:34:57 [INFO]: Waiting for element to be visible
+2026-05-15 11:35:22 [INFO]: Starting login flow
+2026-05-15 11:35:22 [INFO]: Waiting for element to be visible
+2026-05-15 11:35:56 [INFO]: Starting login flow
+2026-05-15 11:35:56 [INFO]: Waiting for element to be visible
+2026-05-15 11:36:31 [INFO]: Starting login flow
+2026-05-15 11:36:31 [INFO]: Waiting for element to be visible
+2026-05-15 11:37:05 [INFO]: Starting login flow
+2026-05-15 11:37:05 [INFO]: Waiting for element to be visible
+2026-05-15 11:37:40 [INFO]: Starting login flow
+2026-05-15 11:37:40 [INFO]: Waiting for element to be visible
+2026-05-15 11:39:44 [INFO]: Starting login flow
+2026-05-15 11:39:59 [INFO]: Starting login flow
+2026-05-15 11:40:15 [INFO]: Starting login flow
+2026-05-15 11:40:29 [INFO]: Starting login flow
+2026-05-15 11:46:26 [INFO]: Starting login flow
+2026-05-15 11:46:27 [INFO]: Expecting URL to contain: inventory
+2026-05-15 11:46:30 [INFO]: Starting login flow
